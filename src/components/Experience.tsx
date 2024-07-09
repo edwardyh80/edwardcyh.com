@@ -97,7 +97,7 @@ const experience = [
 ];
 
 const Experience = () => (
-  <ul className="not-prose mt-4 flex flex-col gap-16">
+  <ul className="not-prose mt-4 flex flex-col gap-8">
     {experience.map((e) => (
       <li
         key={e.label}

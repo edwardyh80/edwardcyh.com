@@ -44,7 +44,7 @@ const freelance = [
 ];
 
 const Freelance = () => (
-  <ul className="not-prose mt-4 flex flex-col gap-16">
+  <ul className="not-prose mt-4 flex flex-col gap-8">
     {freelance.map((f) => (
       <li
         key={f.label}
