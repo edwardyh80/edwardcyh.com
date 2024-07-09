@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose {
+  @apply text-primary-400;
+  a {
+    @apply font-semibold text-primary-200 no-underline transition hover:text-secondary-400;
+  }
+}
