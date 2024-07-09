@@ -76,11 +76,24 @@ const Profile = () => (
         I keep critical data inside NoSQL databases intact and secure.
       </p>
     </div>
+    <ul className="flex flex-row gap-2 lg:order-9">
+      {contact.map((c) => (
+        <li key={c.label}>
+          <Link href={c.url} target="_blank" aria-label={c.label}>
+            <Icon
+              className="rounded-lg p-2 transition hover:text-secondary-400"
+              icon={c.icon}
+              height={40}
+            />
+          </Link>
+        </li>
+      ))}
+    </ul>
     <div className="grow">
       <p className="text-xs font-semibold uppercase tracking-widest text-secondary-400">
         Skills
       </p>
-      <ul className="mt-2 grid h-[136px] w-[280px] grid-cols-4 gap-2">
+      <ul className="ml-2 mt-2 grid h-[136px] w-[280px] grid-cols-4 gap-2">
         {skills.map((s) => (
           <li key={s.label} className="group relative flex">
             <Link href={s.url} target="_blank" aria-label={s.label}>
@@ -97,20 +110,7 @@ const Profile = () => (
         ))}
       </ul>
     </div>
-    <ul className="flex flex-row gap-2">
-      {contact.map((c) => (
-        <li key={c.label}>
-          <Link href={c.url} target="_blank" aria-label={c.label}>
-            <Icon
-              className="rounded-lg p-2 transition hover:text-secondary-400"
-              icon={c.icon}
-              height={40}
-            />
-          </Link>
-        </li>
-      ))}
-    </ul>
-    <Footer className="hidden lg:block" />
+    <Footer className="hidden lg:order-10 lg:block" />
   </header>
 );
 

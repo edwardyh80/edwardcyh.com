@@ -1,6 +1,7 @@
 import About from "./About";
 import Experience from "./Experience";
 import Footer from "./Footer";
+import Freelance from "./Freelance";
 import Interests from "./Interests";
 
 const sections = [
@@ -15,6 +16,10 @@ const sections = [
   {
     label: "Experience",
     content: Experience,
+  },
+  {
+    label: "Freelance Projects",
+    content: Freelance,
   },
 ];
 

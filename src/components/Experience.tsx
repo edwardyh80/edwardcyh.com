@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Icon } from "@iconify/react";
 import { twMerge } from "tailwind-merge";
 
 import RakutenSubsurfaceSpeakerImg from "@/../public/rakuten_subsurface_speaker.jpeg";
@@ -95,51 +96,54 @@ const experience = [
   },
 ];
 
-const Experience = () => {
-  return (
-    <ul className="not-prose mt-4 flex flex-col gap-16">
-      {experience.map((e) => (
-        <li
-          key={e.label}
-          className="grid gap-2 lg:grid-cols-[1fr_3fr] lg:gap-y-8"
-        >
-          <div className="mt-1 flex flex-row justify-between lg:flex-col lg:justify-start">
-            <p className="text-xs font-semibold uppercase">{e.date}</p>
-            <p className="text-xs font-semibold uppercase">{e.location}</p>
-          </div>
-          <div>
-            <p className="font-semibold text-primary-200">
-              {e.role}
-              <span className="mx-1">·</span>
-              <Link href={e.url} target="_blank">
-                {e.company}
-              </Link>
-            </p>
-            <p className="text-xs text-secondary-400">{e.team}</p>
-            <p className="mt-2 text-sm">{e.duties.join(" ")}</p>
-            {(["main", "sub"] as const).map((t) => (
-              <ul key={t} className="mt-2 flex flex-row flex-wrap gap-2">
-                {e.skills[t].map((s) => (
-                  <li
-                    key={s}
-                    className={twMerge(
-                      "rounded-full px-2 py-1 text-xs",
-                      t === "main"
-                        ? "border-2 border-secondary-900 bg-secondary-950 text-secondary-200"
-                        : "border-2 border-tertiary-900 bg-tertiary-950 text-tertiary-200",
-                    )}
-                  >
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            ))}
-          </div>
-          {e.extra && <e.extra />}
-        </li>
-      ))}
-    </ul>
-  );
-};
+const Experience = () => (
+  <ul className="not-prose mt-4 flex flex-col gap-16">
+    {experience.map((e) => (
+      <li
+        key={e.label}
+        className="grid gap-2 lg:grid-cols-[1fr_3fr] lg:gap-y-8"
+      >
+        <div className="mt-2 flex flex-row justify-between lg:flex-col lg:justify-start">
+          <p className="text-xs font-semibold uppercase">{e.date}</p>
+          <p className="text-xs font-semibold uppercase">{e.location}</p>
+        </div>
+        <div>
+          <p className="font-semibold text-primary-200">
+            {e.role}
+            <span className="mx-1">·</span>
+            <Link href={e.url} target="_blank">
+              {e.company}{" "}
+              <Icon
+                className="inline-block"
+                icon="fa6-solid:link"
+                height={16}
+              />
+            </Link>
+          </p>
+          <p className="text-sm text-secondary-400">{e.team}</p>
+          <p className="mt-2 text-sm">{e.duties.join(" ")}</p>
+          {(["main", "sub"] as const).map((t) => (
+            <ul key={t} className="mt-2 flex flex-row flex-wrap gap-2">
+              {e.skills[t].map((s) => (
+                <li
+                  key={s}
+                  className={twMerge(
+                    "rounded-full px-2 py-1 text-xs",
+                    t === "main"
+                      ? "border-2 border-secondary-900 bg-secondary-950 text-secondary-200"
+                      : "border-2 border-tertiary-900 bg-tertiary-950 text-tertiary-200",
+                  )}
+                >
+                  {s}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+        {e.extra && <e.extra />}
+      </li>
+    ))}
+  </ul>
+);
 
 export default Experience;

@@ -50,7 +50,7 @@ const RootLayout = ({
     <body
       className={twMerge(
         inter.className,
-        "min-h-screen min-w-96 scroll-smooth bg-primary-950 bg-gradient-to-br from-primary-950 to-secondary-950 text-primary-400 antialiased",
+        "min-h-screen min-w-[320px] scroll-smooth bg-primary-950 bg-gradient-to-b from-primary-950 to-secondary-950 text-primary-400 antialiased",
       )}
     >
       {children}
