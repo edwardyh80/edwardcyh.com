@@ -7,7 +7,7 @@ const freelance = [
   {
     label: "jia",
     date: "2024 -",
-    title: "Jia 121 - SNS application",
+    title: "Jia 121 - SNS Application",
     desc: ["Starting soon!"],
     skills: {
       main: [],
@@ -38,7 +38,7 @@ const freelance = [
     ],
     skills: {
       main: ["Next.js", "Nest.js", "MySQL", "ELK Stack", "WordPress"],
-      sub: ["Caddy", "Docker"],
+      sub: ["Caddy", "Docker", "Vercel"],
     },
   },
 ];

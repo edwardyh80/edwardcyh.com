@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { twMerge } from "tailwind-merge";
 
 import "./globals.css";
@@ -55,6 +56,7 @@ const RootLayout = ({
     >
       {children}
     </body>
+    <GoogleAnalytics gaId="G-1TWKGR3TLM" />
   </html>
 );
 
