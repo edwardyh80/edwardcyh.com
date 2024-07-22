@@ -19,6 +19,7 @@ const skills = [
     label: "MongoDB",
     url: "https://www.mongodb.com",
     icon: "devicon:mongodb",
+    certified: true,
   },
   {
     label: "Redis",
@@ -72,11 +73,12 @@ const Profile = () => (
         Edward Chow
       </h1>
       <h2 className="mt-2 text-xl text-primary-200">Database Administrator</h2>
+      <h2 className="text-sm text-primary-200">Certified MongoDB DBA</h2>
       <p className="mt-4 max-w-xs">
         I keep critical data inside NoSQL databases intact and secure.
       </p>
     </div>
-    <ul className="flex flex-row gap-2 lg:order-9">
+    <ul className="flex h-[40px] flex-row gap-2 lg:order-9">
       {contact.map((c) => (
         <li key={c.label}>
           <Link href={c.url} target="_blank" aria-label={c.label}>
@@ -106,6 +108,13 @@ const Profile = () => (
             <span className="pointer-events-none absolute left-1/2 top-[68px] z-10 -translate-x-2/4 scale-0 select-none rounded-lg bg-primary-950 p-2 text-xs text-primary-200 transition group-hover:scale-100">
               {s.label}
             </span>
+            {s.certified && (
+              <Icon
+                className="absolute bottom-10 left-10 text-tertiary-400 opacity-75 transition group-hover:scale-110 group-hover:opacity-100"
+                icon="fa6-solid:circle-check"
+                height={24}
+              />
+            )}
           </li>
         ))}
       </ul>
