@@ -14,6 +14,7 @@ const skills = [
     label: "Elastic",
     url: "https://www.elastic.co",
     icon: "devicon:elasticsearch",
+    certified: true,
   },
   {
     label: "MongoDB",
@@ -73,7 +74,23 @@ const Profile = () => (
         Edward Chow
       </h1>
       <h2 className="mt-2 text-xl text-primary-200">Database Administrator</h2>
-      <h2 className="text-sm text-primary-200">Certified MongoDB DBA</h2>
+      <h2 className="text-sm text-primary-400">
+        <Link
+          className="text-primary-200 transition hover:text-secondary-400"
+          href="https://certified.elastic.co/0dc43254-4fce-4248-bee2-dc06b6ed692f"
+          target="_blank"
+        >
+          Certified Elastic Engineer
+        </Link>
+        ,{" "}
+        <Link
+          className="text-primary-200 transition hover:text-secondary-400"
+          href="https://learn.mongodb.com/c/Ge4Y6xu7RnaKGrs6C5QVUA"
+          target="_blank"
+        >
+          Certified MongoDB DBA
+        </Link>
+      </h2>
       <p className="mt-4 max-w-xs">
         I keep critical data inside NoSQL databases intact and secure.
       </p>
@@ -105,12 +122,13 @@ const Profile = () => (
                 height={64}
               />
             </Link>
-            <span className="pointer-events-none absolute left-1/2 top-[68px] z-10 -translate-x-2/4 scale-0 select-none rounded-lg bg-primary-950 p-2 text-xs text-primary-200 transition group-hover:scale-100">
-              {s.label}
-            </span>
+            <div className="pointer-events-none absolute left-1/2 top-[68px] z-10 -translate-x-2/4 scale-0 select-none rounded-lg bg-primary-950 p-2 text-center text-xs text-primary-200 transition group-hover:scale-100">
+              <p>{s.label}</p>
+              {s.certified && <p>(Certified)</p>}
+            </div>
             {s.certified && (
               <Icon
-                className="absolute bottom-10 left-10 text-tertiary-400 opacity-75 transition group-hover:scale-110 group-hover:opacity-100"
+                className="pointer-events-none absolute bottom-10 left-10 select-none text-tertiary-400 transition group-hover:scale-110"
                 icon="fa6-solid:circle-check"
                 height={24}
               />
