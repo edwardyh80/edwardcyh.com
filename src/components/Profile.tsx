@@ -100,7 +100,7 @@ const Profile = () => (
         <li key={c.label}>
           <Link href={c.url} target="_blank" aria-label={c.label}>
             <Icon
-              className="rounded-lg p-2 transition hover:text-secondary-400"
+              className="rounded-lg p-2 text-primary-200 transition hover:text-secondary-400"
               icon={c.icon}
               height={40}
             />
@@ -128,7 +128,7 @@ const Profile = () => (
             </div>
             {s.certified && (
               <Icon
-                className="pointer-events-none absolute bottom-10 left-10 select-none text-tertiary-400 transition group-hover:scale-110"
+                className="pointer-events-none absolute bottom-10 left-10 select-none rounded-full bg-tertiary-950 text-tertiary-400 transition group-hover:scale-125"
                 icon="fa6-solid:circle-check"
                 height={24}
               />

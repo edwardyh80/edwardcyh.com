@@ -33,7 +33,7 @@ const freelance = [
     date: "2021 -",
     title: "Kube - Warehouse Management System",
     desc: [
-      "A full-stack application that helps a local warehouse company manage and control inventory and daily logistics operations for each client,",
+      "A full-stack web application that helps a local warehouse company manage and control inventory and daily logistics operations for each client,",
       "supporting features including invoice generation, real-time notifications and data analytics.",
     ],
     skills: {
