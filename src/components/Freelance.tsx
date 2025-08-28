@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { twMerge } from "tailwind-merge";
 
 const freelance = [
-  {
+  /*{
     label: "jia",
     date: "2024 -",
     title: "Jia 121 - SNS Application",
@@ -13,7 +13,7 @@ const freelance = [
       main: [],
       sub: [],
     },
-  },
+  },*/
   {
     label: "ailab",
     date: "2023 -",

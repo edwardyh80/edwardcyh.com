@@ -30,7 +30,7 @@ const About = () => (
       service uptime and performance meet our standards, and resolving issues
       when something unexpected arises. While our past focus was primarily on
       service availability and data security, we have recently been
-      experimenting with CI/CD tools and generative UI to improve organizational
+      experimenting with CI/CD tools and generative AI to improve organizational
       efficiency.
     </p>
     <p>
