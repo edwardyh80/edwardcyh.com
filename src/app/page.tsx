@@ -59,7 +59,7 @@ const Home = () => {
   }, [refList]);
 
   return (
-    <div className="m-auto flex max-w-screen-xl flex-col gap-16 px-4 lg:flex-row lg:gap-8 lg:px-8">
+    <div className="m-auto flex max-w-(--breakpoint-xl) flex-col gap-16 px-4 lg:flex-row lg:gap-8 lg:px-8">
       <Profile />
       <Nav vis={vis} refList={refList} />
       <Details refList={refList} />
